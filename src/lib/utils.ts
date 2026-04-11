@@ -28,7 +28,11 @@ export function slugify(str: string): string {
 }
 
 export function truncate(text: string, max: number): string {
+<<<<<<< HEAD
   return text.length <= max ? text : text.slice(0, max).trim() + "…";
+=======
+  return text.length <= max ? text : text.slice(0, max).trim() + "â€¦";
+>>>>>>> 546f6298eb2e50e5fd6f66f60c33b2386a2d1f7e
 }
 
 export function buildWhatsAppURL(phone: string, message: string): string {
@@ -55,3 +59,7 @@ export function timeAgo(dateString: string): string {
   if (mins < 43200) return `${Math.floor(mins/1440)}d ago`;
   return new Date(dateString).toLocaleDateString("en-NG",{month:"short",day:"numeric"});
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 546f6298eb2e50e5fd6f66f60c33b2386a2d1f7e

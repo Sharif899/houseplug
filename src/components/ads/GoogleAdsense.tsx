@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import Script from "next/script";
 import { useEffect } from "react";
@@ -73,3 +74,6 @@ export function AdInFeed({ className }: { className?: string }) {
 export function AdInArticle({ className }: { className?: string }) {
   return <AdUnit slot="5544332211" format="auto" className={`my-8 ${className ?? ""}`} label="Advertisement" />;
 }
+=======
+via root layout) â”€â”€ export function GoogleAdsense({ clientId }: { clientId?: string }) { if (!clientId) return null; return ( 
+>>>>>>> 546f6298eb2e50e5fd6f66f60c33b2386a2d1f7e

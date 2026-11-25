@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Eye, EyeOff, Loader2, Home, ChevronRight } from "lucide-react";
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const sp     = useSearchParams();
   const redirectTo = sp.get("redirectTo") || "/dashboard";
@@ -74,6 +74,11 @@ export default function LoginPage() {
     </div>
   );
 }
-</div>
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#F4F8F5] flex items-center justify-center px-4 py-12"><p className="text-[13px] text-[#7a9a7e]">Loading…</p></div>}>
+      <LoginForm />
+    </Suspense>
   );
 }

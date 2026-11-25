@@ -191,7 +191,3 @@ function buildPageUrl(sp: Record<string, string | undefined>, page: number) {
   params.set("page", String(page));
   return `/properties?${params.toString()}`;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 546f6298eb2e50e5fd6f66f60c33b2386a2d1f7e

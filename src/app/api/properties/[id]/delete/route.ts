@@ -18,7 +18,3 @@ export async function POST(_req: Request, { params }: { params: { id: string } }
   await sb.from("properties").delete().eq("id", params.id);
   return NextResponse.redirect(new URL("/dashboard?success=deleted", process.env.NEXT_PUBLIC_APP_URL!));
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 546f6298eb2e50e5fd6f66f60c33b2386a2d1f7e

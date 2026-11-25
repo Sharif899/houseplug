@@ -24,7 +24,7 @@ export function formatPriceWithPeriod(
 }
 
 export function slugify(str: string): string {
-  return str.toLowerCase().replace(/[^\w\s-]/g,"").replace(/\s+/g,"-").replace(/-+/g,"-").trim();
+  return str.toLowerCase().replace(/[^\w\s-]/g,"").replace(/\s+/g,"-").replace(/-+/g,"-").replace(/^-+|-+$/g,"").trim();
 }
 
 export function truncate(text: string, max: number): string {
